@@ -74,5 +74,5 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('Invalid PORT');
   // Intentionally loopback-only: no auth or production exposure.
   const {server} = createApp(process.env.DEMO_DB_PATH || ':memory:');
-  server.listen(port,'127.0.0.1',()=>console.log(`Fictional beekeeping demo: http://127.0.0.1:${port}`));
+  server.listen(port,'127.0.0.1',()=>console.log(`HiveLedger local demo: http://127.0.0.1:${port}`));
 }

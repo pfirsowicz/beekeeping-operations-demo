@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="HiveLedger: a standalone portfolio demonstration of inspection records, apiary management and traceable colony moves, using entirely fictional data." />
+  <meta name="description" content="HiveLedger: a simplified public demo of an existing beekeeping operations application, featuring inspections, apiaries and colony moves with synthetic sample data." />
   <meta name="theme-color" content="#173c32" />
   <title>HiveLedger — Beekeeping Operations Demo</title>
   <link rel="stylesheet" href="./styles.css" />
@@ -37,8 +37,8 @@
         <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Graft Lines — premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Graft Lines</span></span>
       </nav>
       <div class="sidebar-footer">
-        <span class="privacy-dot"></span> FICTIONAL DATA ONLY
-        <p>Independent portfolio project. No production systems or real apiary records.</p>
+        <span class="privacy-dot"></span> SYNTHETIC DEMO DATA
+        <p>Simplified demo of an existing app. No private records or production connection.</p>
         <button id="reset-demo" class="reset-btn" type="button">↺ Reset sample data</button>
       </div>
     </aside>
@@ -47,10 +47,10 @@
         <div><span class="header-kicker">SEASONAL OPERATIONS · DEMO</span><h1 id="page-title">Overview</h1></div>
         <div class="header-actions"><span id="mode-label" class="mode-label">DEMO MODE</span><button class="button primary" data-action="new-inspection" type="button">+ New inspection</button></div>
       </header>
-      <div class="demo-strip" role="note"><strong>PORTFOLIO DEMONSTRATION</strong><span> All apiaries, colonies and inspections are synthetic. Changes remain in this browser or your local demo database.</span></div>
+      <div class="demo-strip" role="note"><strong>SIMPLIFIED PUBLIC DEMO</strong><span> Based on real operational workflows, using synthetic sample records. Changes stay in this browser or your local demo database.</span></div>
       <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
       <div id="content" class="content" aria-live="polite"><p>Loading sample data…</p></div>
-      <footer class="main-footer"><span>HiveLedger · Independent engineering portfolio demo</span><span>Inspections · Lifecycle events · Audit history</span></footer>
+      <footer class="main-footer"><span>HiveLedger · Public demo of a working private beekeeping app</span><span>Inspections · Lifecycle events · Audit history</span></footer>
     </main>
   </div>
   <dialog id="editor" aria-labelledby="dialog-title">

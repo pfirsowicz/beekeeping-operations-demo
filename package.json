@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Independent, synthetic-data portfolio demo of apiary inspections and colony lifecycle events",
+  "description": "Simplified public demo of an existing beekeeping operations app with synthetic records",
   "engines": { "node": ">=22.13.0" },
   "scripts": {
     "start": "node src/server.js",

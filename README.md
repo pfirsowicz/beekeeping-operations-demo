@@ -1,24 +1,24 @@
 # HiveLedger — Beekeeping Operations Demo
 
-**A standalone engineering portfolio project showcasing operational workflows, transactional consistency and traceable colony history.**
+**A simplified public demo of the beekeeping operations application I use to manage my own apiaries — featuring inspections, follow-ups, colony history and transactional consistency.**
 
 **[Live interactive demo](https://pfirsowicz.github.io/beekeeping-operations-demo/)** · **[Latest release: v1.0.0](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.0.0)** · **[CI](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/workflows/ci.yml)**
 
 **Release status (24 October 2026):** GitHub Pages deployed and checked in a live Chromium browser; PR and post-merge Node 22/24 CI passed. End-to-end cross-browser testing remains future work.
 
-This is a fictional example application, not a cut-down deployment of a working beekeeping business system. **All apiaries, colonies, observations and event history are synthetic.** No production services, credentials, private records, routes or infrastructure are used.
+HiveLedger presents a simplified set of workflows from an existing beekeeping application that I actively use for my own operations. This public version is implemented separately from the private system and does not connect to it. **The apiaries, colonies, observations and event history supplied with this demo are synthetic sample data.** No private records, credentials, operational database or production infrastructure are included.
 
 ## Why this project
 
 A beekeeping operation involves more than CRUD: colony identity must survive a move, inspection observations must distinguish *unknown* from *zero*, follow-up tasks need lifecycle state, and a backdated operation must not silently falsify the location history.
 
-HiveLedger demonstrates these constraints using a small, inspectable codebase.
+This public version showcases those established operational workflows in a smaller, inspectable codebase. The full private application remains in active use and is not included in this repository.
 
 ## Features
 
 | Workflow | What the demo does |
 | --- | --- |
-| Apiary overview | Three fictional locations and calculated active-colony counts |
+| Apiary overview | Three sample locations and calculated active-colony counts |
 | Colony register | Search/filter by site; stable colony identity and latest inspection evidence |
 | Inspections | Create/edit structured queen observations, brood-frame counts, stores, temperament and notes |
 | Follow-ups | Schedule from an inspection, update/cancel through editing, complete with a recorded event |
@@ -88,7 +88,7 @@ To check the browser-only deployment path locally, open **http://127.0.0.1:3000/
 
 **[Open HiveLedger](https://pfirsowicz.github.io/beekeeping-operations-demo/)** — a free, browser-based synthetic-data demo. Choose **Harvest** or **Studio** from the Appearance selector. Inspection, follow-up and colony-move actions in the hosted experience affect only your own browser's local demo storage.
 
-**[Version v1.0.0](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.0.0)** — the first stable public portfolio milestone. Its tag points to the reviewed theme-merge commit `fe45c7c7fa26`. GitHub provides source archives automatically.
+**[Version v1.0.0](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.0.0)** — the first stable simplified demo version released for public viewing. Its tag points to the reviewed theme-merge commit `fe45c7c7fa26`. GitHub provides source archives automatically.
 
 **Deployment evidence (24 October 2026):** public GitHub Pages returned HTTP 200 for its index and theme/application assets, and a headless Chrome smoke check rendered the Harvest dashboard, metrics, apiary overview and theme selector. The [post-merge CI run](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/runs/40020136403) passed on Node 22 and 24. These are not a substitute for complete manual desktop/mobile interaction testing.
 
@@ -128,7 +128,7 @@ LICENSE                       MIT for this demo repository only
 
 ## Deliberate limitations
 
-- This is a **portfolio demo**, not an accounting system, production beekeeping diary or regulatory record.
+- This is a **simplified public version of an existing, privately used beekeeping application**. It does not contain authoritative operational records and must not be used as a regulatory or accounting record.
 - The public version has **no shared accounts or sync**, so every visitor has independent local data.
 - The API is **local-only** and unauthenticated, with no production-grade rate limits or deployment hardening.
 - No real queen lineage, treatments, grafting, finance, commercial analytics, private schema or Supabase RPCs are present.
@@ -140,4 +140,4 @@ Browser end-to-end tests (Playwright), an accessible keyboard/form review, prope
 
 ## Licence and separation
 
-**MIT licence applies only to this independent demo repository.** The underlying private beekeeping application and its implementation, schemas, data, domain operations, assets and business features are **not** licensed or included here. This project was built separately with generic domain concepts and entirely invented examples.
+**MIT licence applies only to this independent demo repository.** The underlying private beekeeping application and its implementation, schemas, data, domain operations, assets and business features are **not** licensed or included here. This public subset was implemented independently and contains synthetic records; it does not publish the private system's source code, schema, infrastructure or data.

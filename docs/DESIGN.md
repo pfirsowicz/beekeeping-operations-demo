@@ -1,6 +1,6 @@
 # HiveLedger original dashboard visual system
 
-This public portfolio demo uses an independently implemented visual design. Two legitimately held Colorlib products were reviewed **for visual direction only**:
+This simplified public demo of an existing beekeeping operations application uses an independently implemented visual design. Two legitimately held Colorlib products were reviewed **for visual direction only**:
 
 - CRM Starter (archive dated 9 October 2026): business-software information hierarchy and dashboard conventions.
 - Farmie (archive dated 13 October 2026): agricultural greens, light natural surfaces and a restrained honey-colour accent.
