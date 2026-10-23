@@ -8,6 +8,7 @@
   <title>HiveLedger — Beekeeping Operations Demo</title>
   <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./theme.css" />
+  <link rel="stylesheet" href="./premium.css" />
   <script type="module" src="./theme.js"></script>
   <script type="module" src="./app.js"></script>
 </head>
@@ -27,6 +28,20 @@
         <button data-view="activity"><span aria-hidden="true">≡</span> Activity</button>
         <button data-view="followups"><span aria-hidden="true">◷</span> Follow-ups</button>
       </nav>
+      <details class="premium-menu" open>
+        <summary><span>PREMIUM FEATURES</span><span class="premium-summary-tag">PREVIEW</span></summary>
+        <p class="premium-menu-hint">Advanced modules shown for illustration. Not available in this public demo.</p>
+        <nav class="premium-option-list" aria-label="Unavailable premium features">
+          <button type="button" class="premium-option" disabled aria-label="Treatments — premium feature unavailable in the public demo" title="Premium preview only — not accessible"><span class="premium-label">Treatments</span><span class="premium-lock" aria-hidden="true"></span></button>
+          <button type="button" class="premium-option" disabled aria-label="Sales and Purchases — premium feature unavailable in the public demo" title="Premium preview only — not accessible"><span class="premium-label">Sales &amp; Purchases</span><span class="premium-lock" aria-hidden="true"></span></button>
+          <button type="button" class="premium-option" disabled aria-label="Weather — premium feature unavailable in the public demo" title="Premium preview only — not accessible"><span class="premium-label">Weather</span><span class="premium-lock" aria-hidden="true"></span></button>
+          <button type="button" class="premium-option" disabled aria-label="Analytics — premium feature unavailable in the public demo" title="Premium preview only — not accessible"><span class="premium-label">Analytics</span><span class="premium-lock" aria-hidden="true"></span></button>
+          <button type="button" class="premium-option" disabled aria-label="Queens — premium feature unavailable in the public demo" title="Premium preview only — not accessible"><span class="premium-label">Queens</span><span class="premium-lock" aria-hidden="true"></span></button>
+          <button type="button" class="premium-option" disabled aria-label="Mating — premium feature unavailable in the public demo" title="Premium preview only — not accessible"><span class="premium-label">Mating</span><span class="premium-lock" aria-hidden="true"></span></button>
+          <button type="button" class="premium-option" disabled aria-label="Grafting — premium feature unavailable in the public demo" title="Premium preview only — not accessible"><span class="premium-label">Grafting</span><span class="premium-lock" aria-hidden="true"></span></button>
+          <button type="button" class="premium-option" disabled aria-label="Graft Lines — premium feature unavailable in the public demo" title="Premium preview only — not accessible"><span class="premium-label">Graft Lines</span><span class="premium-lock" aria-hidden="true"></span></button>
+        </nav>
+      </details>
       <div class="sidebar-footer">
         <span class="privacy-dot"></span> FICTIONAL DATA ONLY
         <p>Independent portfolio project. No production systems or real apiary records.</p>
