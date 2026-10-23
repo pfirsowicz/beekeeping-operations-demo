@@ -1,11 +1,11 @@
 # Publication checkpoint — 23 October 2026
 
-**Status: SOURCE PUSHED TO PUBLIC GITHUB REVIEW BRANCH; RELEASE ACCEPTANCE PENDING.**
+**Status: SOURCE MERGED TO PUBLIC MAIN; GITHUB PAGES AND BROWSER ACCEPTANCE PENDING.**
 
 ## Verified
 
 - Repository: https://github.com/pfirsowicz/beekeeping-operations-demo — public.
-- Review branch: `feature/20261023-initial-portfolio-demo`.
+- [Initial PR #1](https://github.com/pfirsowicz/beekeeping-operations-demo/pull/1) was squash-merged to `main` as `7d55870de00fdb27b1238e46a347816be413cb31`.
 - Uploaded source tree: 19 project files verified by GitHub readback.
 - Local Node 22.16: `npm run check`, `npm test` (**31/31 pass**), `npm run audit:public` (pattern scan passed).
 - Code is an independent synthetic portfolio example. Private `beekeeping-data` code, schema, and runtime are not part of this repository.
@@ -13,7 +13,7 @@
 
 ## Not yet verified
 
-- GitHub Actions CI success on pull request and after merge to main.
+- GitHub Actions PR and post-merge main CI both succeeded: [PR run 39938504948](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/runs/39938504948) and [main run 39938608736](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/runs/39938608736).
 - GitHub Pages deployment, public URL, and live/browser visual acceptance.
 - Full independent security review of all repository history and future additions.
 - A real browser check of inspection create/edit, follow-up completion, movement history, browser persistence, mobile layout, and reset.
@@ -21,10 +21,8 @@
 
 ## Publication gates
 
-1. Review and merge the initial-source pull request after CI succeeds.
-2. Verify main branch CI.
-3. Configure GitHub Pages (Settings → Pages → deploy from main /docs), only using no-additional-cost hosted capabilities.
-4. Verify public live rendering and interaction in an independent browser.
-5. Update the owning Confluence checkpoint and portfolio application directory with verified release evidence.
+1. Configure GitHub Pages (Settings → Pages → deploy from main /docs), only using no-additional-cost hosted capabilities.
+2. Verify public live rendering and interaction in an independent browser.
+3. Update the owning Confluence checkpoint and portfolio application directory with verified release evidence.
 
 No production beekeeping system is connected or altered.
