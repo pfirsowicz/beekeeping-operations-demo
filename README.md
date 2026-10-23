@@ -41,23 +41,28 @@ The main navigation includes **Treatments, Sales & Purchases, Weather, Analytics
 
 ### Architecture
 
-```text
-                  Shared pure domain module (docs/domain.js)
-                     validation + immutable commands
-                           /                 \
-                          /                   \
- GitHub Pages demo (docs/)                      Local Node API (src/server.js)
- HTML/CSS/ES modules                            GET /api/state
- Browser localStorage                           POST /api/commands
- Per-visitor sample data                        POST /api/reset
-                          \                   /
-                           \                 /
-                         same command semantics
-                                    |
-                            SQLiteStore
-                   BEGIN IMMEDIATE / COMMIT / ROLLBACK
-                   FK constraints + indexes + op ledger
-                   optimistic revision + idempotency
+```mermaid
+flowchart LR
+    subgraph Hosted["Public demo - GitHub Pages"]
+        UI["Browser UI<br/>docs/index.html + docs/app.js"]
+        BrowserData[("Browser localStorage<br/>per-visitor synthetic data")]
+        UI -->|"read / write"| BrowserData
+    end
+
+    Domain["Shared pure domain module<br/>docs/domain.js<br/>validation + command handling"]
+
+    subgraph Local["Local development - loopback only"]
+        LocalUI["Browser UI<br/>same docs/app.js"]
+        API["Node HTTP API<br/>src/server.js<br/>GET /api/state<br/>POST /api/commands + /api/reset"]
+        Store["SQLiteStore<br/>src/sqlite-store.js<br/>transactions, revision + idempotency"]
+        DB[("Local SQLite<br/>apiaries, colonies, inspections<br/>events, tasks + operations")]
+        LocalUI -->|"HTTP JSON"| API
+        API --> Store
+        Store --> DB
+    end
+
+    UI -. "imports" .-> Domain
+    Store -. "imports" .-> Domain
 ```
 
 **The hosted static and local REST experiences are intentionally different persistence adapters.** GitHub Pages uses visitor-local browser storage because it cannot host a server or shared database. The local API uses normalized, foreign-key-enforced SQLite tables to show real transactional data handling. Neither mode talks to production.
