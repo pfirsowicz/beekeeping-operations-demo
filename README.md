@@ -29,7 +29,7 @@ HiveLedger demonstrates these constraints using a small, inspectable codebase.
 
 ### Advanced modules shown as premium previews
 
-The sidebar also displays **Treatments, Sales & Purchases, Weather, Analytics, Queens, Mating, Grafting and Graft Lines** as locked capabilities. They illustrate the broader product direction and are **not implemented or accessible in this public demo**. The controls are deliberately disabled: there is no hidden route, API access, login, checkout or premium subscription to activate. This is a portfolio preview, not a currently purchasable upgrade.
+The main navigation includes **Treatments, Sales & Purchases, Weather, Analytics, Queens, Mating, Grafting and Graft Lines**, directly below Follow-ups, using lock icons rather than the ordinary navigation icons. Hovering or keyboard-focusing these items shows **“Available in the full application (premium)”**. They illustrate the broader product capabilities but are **not implemented or accessible in this public demo**. They expose no route, API, login, checkout or premium subscription. This is not a currently purchasable upgrade.
 
 ### The distinctive workflow: move a colony
 
