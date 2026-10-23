@@ -2,6 +2,10 @@
 
 **A standalone engineering portfolio project showcasing operational workflows, transactional consistency and traceable colony history.**
 
+**[Live interactive demo](https://pfirsowicz.github.io/beekeeping-operations-demo/)** · **[Latest release: v1.0.0](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.0.0)** · **[CI](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/workflows/ci.yml)**
+
+**Release status (24 October 2026):** GitHub Pages deployed and checked in a live Chromium browser; PR and post-merge Node 22/24 CI passed. End-to-end cross-browser testing remains future work.
+
 This is a fictional example application, not a cut-down deployment of a working beekeeping business system. **All apiaries, colonies, observations and event history are synthetic.** No production services, credentials, private records, routes or infrastructure are used.
 
 ## Why this project
@@ -21,6 +25,7 @@ HiveLedger demonstrates these constraints using a small, inspectable codebase.
 | Colony relocation | Move between apiaries while retaining original source/destination, date and reason |
 | History | Combined colony timeline, location moves and append-only audit events with edited-value deltas |
 | Safety | Domain validation, relational constraints, transactional writes, idempotency, revision conflicts |
+| Appearance | Harvest (green and honey) or Studio (neutral CRM) theme; visitor-local preference |
 
 ### The distinctive workflow: move a colony
 
@@ -70,15 +75,15 @@ To check the browser-only deployment path locally, open **http://127.0.0.1:3000/
 
 > The local API is deliberately bound to `127.0.0.1` and has **no authentication**. Do not expose it to the public Internet or use it for real beekeeping data. `node:sqlite` is marked experimental in Node.js 22; pin and reassess Node support before treating this as a production template.
 
-## Publish a no-cost interactive demonstration
+## Live demo and public release
 
-1. Review the entire contents and create a **new public** GitHub repository, suggested name `beekeeping-operations-demo` (do not publish the private production repository).
-2. Push these files to its `main` branch, including the `docs` folder and `.github/workflows/ci.yml`.
-3. In GitHub repository **Settings → Pages**, select **Deploy from a branch → `main` → `/docs`**, then save.
-4. The public interactive demo should be available at `https://<your-username>.github.io/beekeeping-operations-demo/` after GitHub finishes publishing. Verify this URL in a fresh browser session rather than assuming deployment success.
-5. Inspect **Actions → CI** for the automated Node 22 and 24 test runs; verify both after push. Use only standard GitHub-hosted runners, not billable larger runners.
+**[Open HiveLedger](https://pfirsowicz.github.io/beekeeping-operations-demo/)** — a free, browser-based synthetic-data demo. Choose **Harvest** or **Studio** from the Appearance selector. Inspection, follow-up and colony-move actions in the hosted experience affect only your own browser's local demo storage.
 
-GitHub's public-repository Pages hosting and standard Actions runners are available without additional usage charges under its published pricing rules. Avoid private-repository CI if maintaining a strict no-incremental-charge policy.
+**[Version v1.0.0](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.0.0)** — the first stable public portfolio milestone. Its tag points to the reviewed theme-merge commit `fe45c7c7fa26`. GitHub provides source archives automatically.
+
+**Deployment evidence (24 October 2026):** public GitHub Pages returned HTTP 200 for its index and theme/application assets, and a headless Chrome smoke check rendered the Harvest dashboard, metrics, apiary overview and theme selector. The [post-merge CI run](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/runs/40020136403) passed on Node 22 and 24. These are not a substitute for complete manual desktop/mobile interaction testing.
+
+GitHub Pages uses the static `main` branch `/docs` directory. New versions should pass tests and review before being tagged; source releases and public site deployment are separate gates. The public repository uses no billable database, custom runner or hosting service.
 
 ## Quality and validation
 
@@ -93,14 +98,15 @@ Run `npm test` to exercise:
 
 `npm run audit:public` scans authored implementation and workflow sources for recognised credential patterns and production references, and rejects common accidentally included secret files. This is **not** a complete secret-scanning certification. Also review commit history, GitHub secret-scanning alerts and any added images/dependencies before making the repository public.
 
-A GitHub Actions CI workflow runs syntax checks, all Node tests and publication checks on pushes and pull requests. Tests were run locally before publication; a green remote CI run and public Pages availability must be verified separately.
+GitHub Actions CI runs syntax checks, all Node tests and publication checks on pushes and pull requests. Both PR and post-merge checks for v1.0.0 passed on Node 22 and 24. Browser-level regression testing remains a distinct acceptance activity.
 
 ## Repository structure
 
 ```text
 .github/workflows/ci.yml      Node 22 / Node 24 checks and tests
 docs/                         Static public demo for GitHub Pages
-  index.html, styles.css      Responsive accessible UI
+  index.html, styles.css      Responsive UI
+  theme.css, theme.js         Original Harvest / Studio visual themes
   app.js                      Browser workflows and storage adapter
   domain.js                   Shared pure domain rules
   seed.js                     Synthetic fixture generator
@@ -117,7 +123,7 @@ LICENSE                       MIT for this demo repository only
 - The public version has **no shared accounts or sync**, so every visitor has independent local data.
 - The API is **local-only** and unauthenticated, with no production-grade rate limits or deployment hardening.
 - No real queen lineage, treatments, grafting, finance, commercial analytics, private schema or Supabase RPCs are present.
-- No controlled live browser acceptance or production deployment is implied by unit/integration tests alone.
+- The public static site has been verified live, but full interactive desktop/mobile, keyboard and cross-browser regression acceptance is not yet complete.
 
 ## Further work worth demonstrating
 
