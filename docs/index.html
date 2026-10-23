@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="HiveLedger: a standalone portfolio demonstration of inspection records, apiary management and traceable colony moves, using entirely fictional data." />
+  <meta name="theme-color" content="#173c32" />
+  <title>HiveLedger — Beekeeping Operations Demo</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="./" aria-label="HiveLedger home">
+        <span class="brand-mark" aria-hidden="true">HL</span>
+        <span><strong>HiveLedger</strong><small>OPERATIONS DEMO</small></span>
+      </a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="navigation" id="navigation" aria-label="Views">
+        <button data-view="overview" class="active"><span aria-hidden="true">▦</span> Overview</button>
+        <button data-view="apiaries"><span aria-hidden="true">◇</span> Apiaries</button>
+        <button data-view="colonies"><span aria-hidden="true">⬡</span> Colonies</button>
+        <button data-view="activity"><span aria-hidden="true">≡</span> Activity</button>
+        <button data-view="followups"><span aria-hidden="true">◷</span> Follow-ups</button>
+      </nav>
+      <div class="sidebar-footer">
+        <span class="privacy-dot"></span> FICTIONAL DATA ONLY
+        <p>Independent portfolio project. No production systems or real apiary records.</p>
+        <button id="reset-demo" class="reset-btn" type="button">↺ Reset sample data</button>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar">
+        <div><span class="eyebrow">BEEKEEPING / OPERATIONS</span><h1 id="page-title">Overview</h1></div>
+        <div class="header-actions"><span id="mode-label" class="mode-label">DEMO MODE</span><button class="button primary" data-action="new-inspection" type="button">+ New inspection</button></div>
+      </header>
+      <div class="demo-strip" role="note"><strong>PORTFOLIO DEMONSTRATION</strong><span> All apiaries, colonies and inspections are synthetic. Changes remain in this browser or your local demo database.</span></div>
+      <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+      <div id="content" class="content" aria-live="polite"><p>Loading sample data…</p></div>
+      <footer class="main-footer"><span>HiveLedger · Independent engineering portfolio demo</span><span>Inspections · Lifecycle events · Audit history</span></footer>
+    </main>
+  </div>
+  <dialog id="editor" aria-labelledby="dialog-title">
+    <div class="dialog-head"><div><span class="eyebrow">WORKFLOW</span><h2 id="dialog-title">New inspection</h2></div><button type="button" class="close" id="close-dialog" aria-label="Close form">×</button></div>
+    <form id="editor-form" method="dialog"><div id="form-fields"></div><div class="dialog-actions"><button type="button" id="cancel-dialog" class="button secondary">Cancel</button><button class="button primary" type="submit" id="submit-form">Save</button></div></form>
+  </dialog>
+</body>
+</html>

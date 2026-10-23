@@ -1,0 +1,15 @@
+{
+  "name": "beekeeping-operations-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Independent, synthetic-data portfolio demo of apiary inspections and colony lifecycle events",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "check": "node --check docs/app.js && node --check docs/domain.js && node --check docs/seed.js && node --check src/sqlite-store.js && node --check src/server.js",
+    "audit:public": "node scripts/publication-check.js"
+  },
+  "license": "MIT"
+}
