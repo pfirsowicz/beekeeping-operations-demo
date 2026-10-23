@@ -7,6 +7,8 @@
   <meta name="theme-color" content="#173c32" />
   <title>HiveLedger — Beekeeping Operations Demo</title>
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./theme.css" />
+  <script type="module" src="./theme.js"></script>
   <script type="module" src="./app.js"></script>
 </head>
 <body>
@@ -17,6 +19,7 @@
         <span><strong>HiveLedger</strong><small>OPERATIONS DEMO</small></span>
       </a>
       <div class="sidebar-label">WORKSPACE</div>
+      <div class="theme-controls"><label for="theme-select">APPEARANCE</label><select id="theme-select" aria-label="Dashboard appearance"><option value="harvest">Harvest · Green & honey</option><option value="studio">Studio · Neutral CRM</option></select></div>
       <nav class="navigation" id="navigation" aria-label="Views">
         <button data-view="overview" class="active"><span aria-hidden="true">▦</span> Overview</button>
         <button data-view="apiaries"><span aria-hidden="true">◇</span> Apiaries</button>
@@ -32,7 +35,7 @@
     </aside>
     <main class="main-content">
       <header class="topbar">
-        <div><span class="eyebrow">BEEKEEPING / OPERATIONS</span><h1 id="page-title">Overview</h1></div>
+        <div><span class="header-kicker">SEASONAL OPERATIONS · DEMO</span><h1 id="page-title">Overview</h1></div>
         <div class="header-actions"><span id="mode-label" class="mode-label">DEMO MODE</span><button class="button primary" data-action="new-inspection" type="button">+ New inspection</button></div>
       </header>
       <div class="demo-strip" role="note"><strong>PORTFOLIO DEMONSTRATION</strong><span> All apiaries, colonies and inspections are synthetic. Changes remain in this browser or your local demo database.</span></div>
