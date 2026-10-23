@@ -27,6 +27,10 @@ HiveLedger demonstrates these constraints using a small, inspectable codebase.
 | Safety | Domain validation, relational constraints, transactional writes, idempotency, revision conflicts |
 | Appearance | Harvest (green and honey) or Studio (neutral CRM) theme; visitor-local preference |
 
+### Advanced modules shown as premium previews
+
+The sidebar also displays **Treatments, Sales & Purchases, Weather, Analytics, Queens, Mating, Grafting and Graft Lines** as locked capabilities. They illustrate the broader product direction and are **not implemented or accessible in this public demo**. The controls are deliberately disabled: there is no hidden route, API access, login, checkout or premium subscription to activate. This is a portfolio preview, not a currently purchasable upgrade.
+
 ### The distinctive workflow: move a colony
 
 1. Inspect **COL-101** in fictional **Fern Ridge**.
