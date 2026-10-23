@@ -11,9 +11,10 @@
 - Code is an independent synthetic portfolio example. Private `beekeeping-data` code, schema, and runtime are not part of this repository.
 - Confluence current-state checkpoint: https://pawelf.atlassian.net/wiki/spaces/HOME/pages/421855247
 
+- GitHub Actions PR and post-merge main CI both succeeded: [PR run 39938504948](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/runs/39938504948) and [main run 39938608736](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/runs/39938608736).
+
 ## Not yet verified
 
-- GitHub Actions PR and post-merge main CI both succeeded: [PR run 39938504948](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/runs/39938504948) and [main run 39938608736](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/runs/39938608736).
 - GitHub Pages deployment, public URL, and live/browser visual acceptance.
 - Full independent security review of all repository history and future additions.
 - A real browser check of inspection create/edit, follow-up completion, movement history, browser persistence, mobile layout, and reset.
