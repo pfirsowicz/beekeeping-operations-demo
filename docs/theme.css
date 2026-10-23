@@ -1,0 +1,38 @@
+/* Original HiveLedger visual system. CRM Starter and Farmie used as references only. */
+:root{--pine:#244f3d;--deep:#193f31;--muted:#6c7b6d;--subtle:#f4f4e9;--surface:#fffefb;--page:#f7f7f0;--accent:#e1aa43;--border:#e5e8d9;--ink:#26382c;--shadow:0 8px 25px rgba(37,70,38,.05)}
+body{background:var(--page)}
+.app-shell{grid-template-columns:258px minmax(0,1fr)}
+.sidebar{position:sticky;top:0;height:100vh;background:linear-gradient(170deg,#244f3d,#18392d);border-right:1px solid #52725c;padding:30px 19px}
+.brand{margin-bottom:22px}.brand-mark{background:#e1ae50;color:#24402a;border-radius:14px;transform:none;box-shadow:0 5px 20px #1a302980}
+.brand small{letter-spacing:1.8px}.sidebar-label{color:#d1d9be;letter-spacing:1.5px}
+.navigation{gap:6px}.navigation button{border-radius:11px;min-height:45px;transition:background .18s,transform .18s}
+.navigation button:hover{transform:translateX(2px)}.navigation button.active{background:#f1f1dc;color:#244f3d;box-shadow:inset 3px 0 #dcaa4d}
+.sidebar-footer{background:#ffffff0a;padding:17px;border:1px solid #ffffff22;border-radius:14px}.sidebar-footer p{color:#b8cbbd}
+.main-content{padding:32px clamp(22px,4vw,74px);max-width:1780px;width:100%;margin:0 auto}
+.topbar{margin-bottom:22px}.topbar h1{font-weight:850;letter-spacing:-1px}.eyebrow{color:#698e70;letter-spacing:1.6px}
+.button.primary{background:#29583e;color:white;box-shadow:0 4px 12px #27472e21}.button.primary:hover{background:#1e4730}
+.demo-strip{background:#fff8e7;border:1px solid #f0e4c4;color:#665d44;border-radius:12px}
+.demo-strip strong{color:#8d681c}.metric-card,.panel,.apiary-card,.colony-card{border-radius:16px;border:1px solid var(--border);box-shadow:0 4px 18px #26382c0a}
+.metric-card{position:relative;overflow:hidden;min-height:140px;padding:23px}.metric-card:before{content:'';display:block;width:33px;height:5px;border-radius:9px;background:#e1ac45;margin-bottom:12px}.metric-value{color:#234c38}.metric-grid .metric-card:nth-child(even):before{background:#85aa76}
+.hero{background:linear-gradient(114deg,#214a37,#3a6b4c 83%);min-height:184px;border:1px solid #42785a;box-shadow:0 12px 30px #213f3124}
+.hero:before{content:'';position:absolute;border-radius:50%;width:320px;height:320px;right:-75px;top:-200px;background:#edbd5920}
+.hero:after{content:'';width:190px;height:190px;border-radius:50%;position:absolute;right:6%;top:44px;background:radial-gradient(circle at center,#ffffff14 0 4px,transparent 5px),radial-gradient(circle at center,#ffffff06,transparent 65%);background-size:28px 28px,100% 100%;transform:none}
+.hero .eyebrow{color:#f2cb79}.hero h2{font-size:27px}.hero p{color:#d9e9da}
+.apiary-card:hover,.colony-card:hover{border-color:#dfbf74;box-shadow:0 13px 32px #36583a16}
+.apiary-icon{background:#f2f5e5;color:#497a4d}.apiary-count{background:#fff2d4;color:#816224}
+.pill{background:#ebf3e6;color:#2e6541}.pill.caution,.task-tag{background:#fff2d5;color:#86601c}
+.section-title,.panel-head h2{color:#284633}.search-input,.filter-select{background:#fffefa;border-color:#e2e6d7}
+.main-footer{color:#86927f}.reset-btn{border-color:#a6b7a8}
+.theme-controls{display:grid;gap:9px;margin:4px 6px 12px}.theme-controls label{font-size:10px;font-weight:800;letter-spacing:1.4px;color:#d2dfce}.theme-controls select{width:100%;background:#173b2d;border:1px solid #69927b;color:#f4f6e9;border-radius:9px;padding:9px 11px;font-size:12px}
+.header-kicker{display:inline-flex;align-items:center;gap:7px;color:#577459;font-size:11px;font-weight:800;letter-spacing:1px;margin-bottom:8px}.header-kicker:before{content:'';width:7px;height:7px;background:#d6ac51;border-radius:50%}
+.theme-leaf{position:absolute;right:12px;top:24px;opacity:.13;font-size:65px;pointer-events:none}
+html[data-theme="studio"]{--pine:#293d49;--deep:#172b35;--muted:#687685;--subtle:#eef2f6;--surface:#fff;--page:#f5f7fa;--accent:#b88a38;--border:#e1e7ec;--ink:#263c49}
+html[data-theme="studio"] .sidebar{background:linear-gradient(170deg,#293d49,#172b35)}
+html[data-theme="studio"] .navigation button.active{background:#e9f0f4;color:#1b4455}
+html[data-theme="studio"] .hero{background:linear-gradient(114deg,#294556,#486b7a)}
+html[data-theme="studio"] .metric-value,html[data-theme="studio"] .section-title,html[data-theme="studio"] .panel-head h2{color:#294b5b}
+html[data-theme="studio"] .metric-grid .metric-card:nth-child(even):before{background:#84a5b6}
+html[data-theme="studio"] .demo-strip{background:#eff4f7;border-color:#dce5eb;color:#475a69}
+html[data-theme="studio"] .demo-strip strong{color:#38637a}
+@media(max-width:850px){.app-shell{display:block}.sidebar{height:auto;min-height:auto;position:relative}.theme-controls{display:flex;align-items:center;gap:9px;margin:0}.theme-controls label{white-space:nowrap}.theme-controls select{max-width:180px}.sidebar-footer{display:none}.main-content{padding:22px}.metric-card{min-height:auto}}
+@media(max-width:520px){.theme-controls{margin:5px 0}.sidebar{padding:14px}.metric-card{padding:14px}.hero:after{right:-30px}.hero h2{font-size:22px}}
