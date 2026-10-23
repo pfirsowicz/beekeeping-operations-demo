@@ -1,4 +1,4 @@
-/** Fictional data generated locally for the portfolio demonstration only. */
+/** Synthetic seed records for the public demo; not operational apiary data. */
 const isoDaysAgo = (now, days) => {
   const d = new Date(`${now}T12:00:00.000Z`);
   d.setUTCDate(d.getUTCDate() - days);

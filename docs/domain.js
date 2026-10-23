@@ -1,6 +1,6 @@
 /**
- * Deliberately independent portfolio domain. No connection to a live apiary or
- * the owner's production database and no imported production code.
+ * Simplified public implementation of workflows from an existing privately used
+ * beekeeping app. No private source code, live data, or production connection.
  */
 export class DomainError extends Error {
   constructor(message, code = 'INVALID_OPERATION') {
