@@ -125,7 +125,7 @@ src/server.js                 Loopback-only Node HTTP API
 src/sqlite-store.js           Normalized, transactional SQLite implementation
 test/                         Domain, database and HTTP integration tests
 scripts/publication-check.js  Basic public-source safeguard
-LICENSE                       MIT for this demo repository only
+LICENSE                       All Rights Reserved for original demo code
 ```
 
 ## Deliberate limitations
@@ -140,6 +140,6 @@ LICENSE                       MIT for this demo repository only
 
 Browser end-to-end tests (Playwright), an accessible keyboard/form review, property-based chronology tests, data export/import, a versioned SQLite migration runner, and API auth/authorization would make sense if this were expanded. Avoid extra features that obscure the four core workflows.
 
-## Licence and separation
+## Copyright and separation
 
-**MIT licence applies only to this independent demo repository.** The underlying private beekeeping application and its implementation, schemas, data, domain operations, assets and business features are **not** licensed or included here. This public subset was implemented independently and contains synthetic records; it does not publish the private system's source code, schema, infrastructure or data.
+**Copyright © 2026 Pawel Firsowicz. All rights reserved.** The current original demo code is publicly viewable for portfolio evaluation; it is not licensed for copying, redistribution, commercial deployment or modification without written permission. Previously MIT-licensed versions retain the rights granted under their original licence.  The underlying private beekeeping application and its implementation, schemas, data, domain operations, assets and business features are **not** licensed or included here. This public subset was implemented independently and contains synthetic records; it does not publish the private system's source code, schema, infrastructure or data.
