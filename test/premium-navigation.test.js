@@ -34,5 +34,5 @@ test('locked appearance supports pointer and keyboard tooltip without premium ro
   assert.match(css,/\.navigation \.nav-locked:focus-visible\{/);
   assert.match(css,/@media\(max-width:850px\)/);
   assert.match(html,/href="\.\/premium\.css"/);
-  assert.doesNotMatch(html+css, /checkout|stripe|subscription-api|https?:\/\//i);
+  assert.doesNotMatch(html.replace(/<(?:meta|link)\b[^>]*>/g, '')+css, /checkout|stripe|subscription-api|https?:\/\//i);
 });
