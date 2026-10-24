@@ -24,5 +24,3 @@
 ## Documentation
 
 [Software Development / Beekeeping Operations Demo current state](https://pawelf.atlassian.net/wiki/spaces/HOME/pages/421855247) is the canonical specialist status and ownership record.
-
-**Next:** complete an independent desktop/mobile interaction and accessibility pass, then update the owning page with evidence. No new release is required for documentation-only changes after the current documentation review.
