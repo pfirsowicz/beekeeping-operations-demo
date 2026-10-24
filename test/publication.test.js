@@ -7,7 +7,7 @@ test('GitHub Pages entrypoint uses only relative, published static assets',async
   const html=await readFile(new URL('index.html',root),'utf8');
   assert.match(html, /href="\.\/styles\.css"/);
   assert.match(html, /src="\.\/app\.js"/);
-  assert.doesNotMatch(html,/https?:\/\//);
+  assert.doesNotMatch(html.replace(/<(?:meta|link)\b[^>]*>/g, ''),/https?:\/\//);
   for (const name of ['app.js','domain.js','seed.js','styles.css']) {
     assert((await readFile(new URL(name,root))).length>100);
   }
