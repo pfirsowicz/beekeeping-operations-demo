@@ -18,3 +18,22 @@ test('browser-only mode does not require remote credentials or a hosted backend'
   assert.match(app,/localStorage/);
   assert.doesNotMatch(app,/\.supabase\.co|\/\/cdn\./);
 });
+
+test('published HTML keeps Unicode labels intact without mojibake', async () => {
+  const html = await readFile(new URL('index.html',root),'utf8');
+  assert.match(html, /<meta charset="utf-8"/);
+  for (const label of [
+    'HiveLedger — Beekeeping Operations Demo',
+    'Harvest · Green & honey',
+    'Studio · Neutral CRM',
+    '▦</span> Overview',
+    '◇</span> Apiaries',
+    '⬡</span> Colonies',
+    '≡</span> Activity',
+    '◷</span> Follow-ups',
+    '↺ Reset sample data',
+    'Loading sample data…',
+    'Close form">×</button>'
+  ]) assert.ok(html.includes(label), `missing or corrupted label: ${label}`);
+  assert.doesNotMatch(html, /[\u00c2\u00c3\u00e2][\u0080-\u00bf\u201a-\u2122]/u);
+});
