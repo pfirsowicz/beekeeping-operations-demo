@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="Explore colony inspections, follow-ups and traceable relocations using synthetic data. Includes domain modelling, a separate local Node.js/SQLite API and automated tests." /> <link rel="canonical" href="https://pfirsowicz.github.io/beekeeping-operations-demo/" /> <meta property="og:type" content="website" /> <meta property="og:title" content="HiveLedger — Beekeeping Operations Demo" /> <meta property="og:description" content="Explore colony inspections, follow-ups and traceable relocations using synthetic data. Includes domain modelling, a separate local Node.js/SQLite API and automated tests." /> <meta property="og:url" content="https://pfirsowicz.github.io/beekeeping-operations-demo/" /> <meta property="og:image" content="https://pfirsowicz.github.io/beekeeping-operations-demo/og-preview.png" /> <meta property="og:image:width" content="1200" /> <meta property="og:image:height" content="630" /> <meta property="og:image:alt" content="Actual synthetic dashboard of HIVELEDGER" /> <meta name="twitter:card" content="summary_large_image" /> <meta name="twitter:title" content="HiveLedger — Beekeeping Operations Demo" /> <meta name="twitter:description" content="Explore colony inspections, follow-ups and traceable relocations using synthetic data. Includes domain modelling, a separate local Node.js/SQLite API and automated tests." /> <meta name="twitter:image" content="https://pfirsowicz.github.io/beekeeping-operations-demo/og-preview.png" />
   <meta name="theme-color" content="#173c32" />
-  <title>HiveLedger â€” Beekeeping Operations Demo</title>
+  <title>HiveLedger — Beekeeping Operations Demo</title>
   <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./theme.css" />
   <link rel="stylesheet" href="./premium.css" />
@@ -20,41 +20,41 @@
         <span><strong>HiveLedger</strong><small>OPERATIONS DEMO</small></span>
       </a>
       <div class="sidebar-label">WORKSPACE</div>
-      <div class="theme-controls"><label for="theme-select">APPEARANCE</label><select id="theme-select" aria-label="Dashboard appearance"><option value="harvest">Harvest Â· Green & honey</option><option value="studio">Studio Â· Neutral CRM</option></select></div>
+      <div class="theme-controls"><label for="theme-select">APPEARANCE</label><select id="theme-select" aria-label="Dashboard appearance"><option value="harvest">Harvest · Green & honey</option><option value="studio">Studio · Neutral CRM</option></select></div>
       <nav class="navigation" id="navigation" aria-label="Views">
-        <button data-view="overview" class="active"><span aria-hidden="true">â–¦</span> Overview</button>
-        <button data-view="apiaries"><span aria-hidden="true">â—‡</span> Apiaries</button>
-        <button data-view="colonies"><span aria-hidden="true">â¬¡</span> Colonies</button>
-        <button data-view="activity"><span aria-hidden="true">â‰¡</span> Activity</button>
-        <button data-view="followups"><span aria-hidden="true">â—·</span> Follow-ups</button>
-        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Treatments â€” premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Treatments</span></span>
-        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Sales &amp; Purchases â€” premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Sales &amp; Purchases</span></span>
-        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Weather â€” premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Weather</span></span>
-        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Analytics â€” premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Analytics</span></span>
-        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Queens â€” premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Queens</span></span>
-        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Mating â€” premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Mating</span></span>
-        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Grafting â€” premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Grafting</span></span>
-        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Graft Lines â€” premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Graft Lines</span></span>
+        <button data-view="overview" class="active"><span aria-hidden="true">▦</span> Overview</button>
+        <button data-view="apiaries"><span aria-hidden="true">◇</span> Apiaries</button>
+        <button data-view="colonies"><span aria-hidden="true">⬡</span> Colonies</button>
+        <button data-view="activity"><span aria-hidden="true">≡</span> Activity</button>
+        <button data-view="followups"><span aria-hidden="true">◷</span> Follow-ups</button>
+        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Treatments — premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Treatments</span></span>
+        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Sales &amp; Purchases — premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Sales &amp; Purchases</span></span>
+        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Weather — premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Weather</span></span>
+        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Analytics — premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Analytics</span></span>
+        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Queens — premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Queens</span></span>
+        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Mating — premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Mating</span></span>
+        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Grafting — premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Grafting</span></span>
+        <span class="nav-locked" role="button" tabindex="0" aria-disabled="true" aria-label="Graft Lines — premium feature, not included in the public demo" title="Available in the full application (premium)" data-tooltip="Available in the full application (premium)"><span class="premium-lock" aria-hidden="true"></span><span class="premium-label">Graft Lines</span></span>
       </nav>
       <div class="sidebar-footer">
         <span class="privacy-dot"></span> SYNTHETIC DEMO DATA
         <p>Simplified demo of an existing app. No private records or production connection.</p>
-        <button id="reset-demo" class="reset-btn" type="button">â†º Reset sample data</button>
+        <button id="reset-demo" class="reset-btn" type="button">↺ Reset sample data</button>
       </div>
     </aside>
     <main class="main-content">
       <header class="topbar">
-        <div><span class="header-kicker">SEASONAL OPERATIONS Â· DEMO</span><h1 id="page-title">Overview</h1></div>
+        <div><span class="header-kicker">SEASONAL OPERATIONS · DEMO</span><h1 id="page-title">Overview</h1></div>
         <div class="header-actions"><span id="mode-label" class="mode-label">DEMO MODE</span><button class="button primary" data-action="new-inspection" type="button">+ New inspection</button></div>
       </header>
       <div class="demo-strip" role="note"><strong>SIMPLIFIED PUBLIC DEMO</strong><span> Based on real operational workflows, using synthetic sample records. Changes stay in this browser or your local demo database.</span></div>
       <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
-      <div id="content" class="content" aria-live="polite"><p>Loading sample dataâ€¦</p></div>
-      <footer class="main-footer"><span>HiveLedger Â· Public demo of a working private beekeeping app</span><span>Inspections Â· Lifecycle events Â· Audit history</span></footer>
+      <div id="content" class="content" aria-live="polite"><p>Loading sample data…</p></div>
+      <footer class="main-footer"><span>HiveLedger · Public demo of a working private beekeeping app</span><span>Inspections · Lifecycle events · Audit history</span></footer>
     </main>
   </div>
   <dialog id="editor" aria-labelledby="dialog-title">
-    <div class="dialog-head"><div><span class="eyebrow">WORKFLOW</span><h2 id="dialog-title">New inspection</h2></div><button type="button" class="close" id="close-dialog" aria-label="Close form">Ã—</button></div>
+    <div class="dialog-head"><div><span class="eyebrow">WORKFLOW</span><h2 id="dialog-title">New inspection</h2></div><button type="button" class="close" id="close-dialog" aria-label="Close form">×</button></div>
     <form id="editor-form" method="dialog"><div id="form-fields"></div><div class="dialog-actions"><button type="button" id="cancel-dialog" class="button secondary">Cancel</button><button class="button primary" type="submit" id="submit-form">Save</button></div></form>
   </dialog>
 </body>
