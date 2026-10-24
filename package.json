@@ -11,5 +11,5 @@
     "check": "node --check docs/app.js && node --check docs/domain.js && node --check docs/seed.js && node --check src/sqlite-store.js && node --check src/server.js",
     "audit:public": "node scripts/publication-check.js"
   },
-  "license": "MIT"
+  "license": "UNLICENSED"
 }
