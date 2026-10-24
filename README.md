@@ -2,7 +2,7 @@
 
 **A simplified public demo of the beekeeping operations application I use to manage my own apiaries — featuring inspections, follow-ups, colony history and transactional consistency.**
 
-**[Live interactive demo](https://pfirsowicz.github.io/beekeeping-operations-demo/)** · **[Latest release: v1.0.0](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.0.0)** · **[CI](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/workflows/ci.yml)**
+**[Live interactive demo](https://pfirsowicz.github.io/beekeeping-operations-demo/)** · **[Latest release: v1.0.1](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.0.1)** · **[CI](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/workflows/ci.yml)**
 
 ![HiveLedger simplified public demo — Harvest dashboard with apiary overview, colony metrics and follow-ups](docs/screenshots/hiveledger-dashboard.png)
 
@@ -90,7 +90,7 @@ To check the browser-only deployment path locally, open **http://127.0.0.1:3000/
 
 **[Open HiveLedger](https://pfirsowicz.github.io/beekeeping-operations-demo/)** — a free, browser-based synthetic-data demo. Choose **Harvest** or **Studio** from the Appearance selector. Inspection, follow-up and colony-move actions in the hosted experience affect only your own browser's local demo storage.
 
-**[Version v1.0.0](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.0.0)** — the first stable simplified demo version released for public viewing. Its tag points to the reviewed theme-merge commit `fe45c7c7fa26`. GitHub provides source archives automatically.
+**[Version v1.0.1](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.0.1)** — the current All Rights Reserved simplified public demo release. The original `v1.0.0` release was published under MIT; its historical Git tag remains at the reviewed theme-merge commit `fe45c7c7fa26`. Removal of the old GitHub release listing does not revoke prior MIT permissions. GitHub provides source archives automatically.
 
 **Deployment evidence (24 October 2026):** public GitHub Pages returned HTTP 200 for its index and theme/application assets, and a headless Chrome smoke check rendered the Harvest dashboard, metrics, apiary overview and theme selector. The [post-merge CI run](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/runs/40020136403) passed on Node 22 and 24. These are not a substitute for complete manual desktop/mobile interaction testing.
 

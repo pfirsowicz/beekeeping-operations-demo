@@ -1,6 +1,6 @@
 {
   "name": "beekeeping-operations-demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "description": "Simplified public demo of an existing beekeeping operations app with synthetic records",
