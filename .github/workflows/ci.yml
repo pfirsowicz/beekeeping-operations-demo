@@ -18,6 +18,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
+      - run: npm ci
       - run: npm run check
       - run: npm test
       - run: npm run audit:public
+      - name: Verify browser workflows (Chrome)
+        run: |
+          command -v google-chrome
+          npm run test:browser

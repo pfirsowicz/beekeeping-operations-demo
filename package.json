@@ -4,12 +4,18 @@
   "private": true,
   "type": "module",
   "description": "Simplified public demo of an existing beekeeping operations app with synthetic records",
-  "engines": { "node": ">=22.13.0" },
+  "engines": {
+    "node": ">=22.13.0"
+  },
   "scripts": {
     "start": "node src/server.js",
     "test": "node --test",
     "check": "node --check docs/app.js && node --check docs/domain.js && node --check docs/seed.js && node --check src/sqlite-store.js && node --check src/server.js",
-    "audit:public": "node scripts/publication-check.js"
+    "audit:public": "node scripts/publication-check.js",
+    "test:browser": "node scripts/browser-acceptance.js"
   },
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "playwright-core": "^1.56.1"
+  }
 }
