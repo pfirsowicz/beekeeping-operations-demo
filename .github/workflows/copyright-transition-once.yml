@@ -1,0 +1,54 @@
+name: Publish v1.0.1 and retire old release (one-time)
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+permissions:
+  contents: write
+jobs:
+  publish:
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push' &&
+      github.event.workflow_run.head_branch == 'main' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish verified current code and retire prior release record
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          set -euo pipefail
+          current="$(gh api "repos/$REPO/git/ref/heads/main" --jq '.object.sha')"
+          if [ "$current" != "$SHA" ]; then
+            echo "Main moved after validation; no release actions performed"
+            exit 1
+          fi
+          gh api "repos/$REPO/contents/LICENSE?ref=main" --jq '.content' | base64 -d | grep -qi "All rights reserved"
+          if ! gh release view v1.0.1 --repo "$REPO" > /dev/null 2>&1; then
+            cat > "$RUNNER_TEMP/release-notes.md" <<'NOTES'
+          # HiveLedger v1.0.1 — All Rights Reserved
+
+          This release is the current simplified public demo of the author's actively used beekeeping operations application. It includes synthetic sample data and the current inspection, follow-up, colony movement, theme, and locked-navigation features.
+
+          **Copyright © 2026 Pawel Firsowicz. All rights reserved.** The original application source is publicly inspectable for portfolio evaluation, but no permission is granted for unauthorised copying, redistribution, modification, commercial deployment, or exploitation. See LICENSE.
+
+          **Historical licensing:** v1.0.0 was previously published under MIT. Removing its GitHub Release listing does not revoke rights already granted for that historical version, and the original v1.0.0 Git tag is retained as an accurate record. Third-party licensing remains unchanged.
+
+          The GitHub Pages demo uses synthetic browser-local data. The optional Node/SQLite service is local-only and is not a production/public API.
+          NOTES
+            gh release create v1.0.1 --repo "$REPO" --target "$SHA" --title "HiveLedger v1.0.1 — All Rights Reserved" --notes-file "$RUNNER_TEMP/release-notes.md" --latest
+          fi
+          tag_sha="$(gh api "repos/$REPO/git/ref/tags/v1.0.1" --jq '.object.sha')"
+          if [ "$tag_sha" != "$SHA" ]; then
+            echo "v1.0.1 tag target differs from CI-validated main; not deleting older release"
+            exit 1
+          fi
+          gh release view v1.0.1 --repo "$REPO" --json tagName,isDraft,isPrerelease --jq 'select(.tagName=="v1.0.1" and (.isDraft|not) and (.isPrerelease|not)) | .tagName' | grep -qx 'v1.0.1'
+          if gh release view v1.0.0 --repo "$REPO" > /dev/null 2>&1; then
+            gh release delete v1.0.0 --repo "$REPO" --yes
+          fi
+          gh release view v1.0.1 --repo "$REPO" --json url --jq '.url'
