@@ -7,7 +7,7 @@ This simplified public demo of an existing beekeeping operations application use
 
 **No source, images, font files, icons, stylesheet code or other distributable assets from either template were copied into this repository.** Farmie's commercial licence expressly prohibits publishing its source or modified template as a publicly downloadable template. Referencing broad colour and layout ideas does not make the full commercial template open source.
 
-The implementation remains the application's own plain HTML/CSS/JavaScript, with no frontend dependency or build step. The original application source and design are now All Rights Reserved; see the root `LICENSE` notice. Earlier MIT-licensed versions retain the permissions originally granted for those releases.
+The implementation remains the application's own plain HTML/CSS/JavaScript, with no frontend dependency or build step. The original application source and design are now All Rights Reserved; see the root `LICENSE` notice.
 
 ## Presets
 
