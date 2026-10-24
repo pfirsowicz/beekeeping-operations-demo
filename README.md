@@ -2,7 +2,7 @@
 
 **A simplified public demo of the beekeeping operations application I use to manage my own apiaries — featuring inspections, follow-ups, colony history and transactional consistency.**
 
-**[Live interactive demo](https://pfirsowicz.github.io/beekeeping-operations-demo/)** · **[Latest release: v1.0.1](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.0.1)** · **[CI](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/workflows/ci.yml)**
+**[Live interactive demo](https://pfirsowicz.github.io/beekeeping-operations-demo/)** · **[Latest release: v1.1.0](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.1.0)** · **[CI](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/workflows/ci.yml)**
 
 ![HiveLedger simplified public demo — Harvest dashboard with apiary overview, colony metrics and follow-ups](docs/screenshots/hiveledger-dashboard.png)
 
@@ -86,7 +86,7 @@ To check the browser-only deployment path locally, open **http://127.0.0.1:3000/
 
 **[Open HiveLedger](https://pfirsowicz.github.io/beekeeping-operations-demo/)** — a free, browser-based synthetic-data demo. Choose **Harvest** or **Studio** from the Appearance selector. Inspection, follow-up and colony-move actions in the hosted experience affect only your own browser's local demo storage.
 
-**[Version v1.0.1](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.0.1)** — the current All Rights Reserved simplified public demo release. GitHub provides source archives automatically.
+**[Version v1.1.0](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.1.0)** — the current All Rights Reserved simplified public demo release. GitHub provides source archives automatically.
 
 ## Quality and validation
 
