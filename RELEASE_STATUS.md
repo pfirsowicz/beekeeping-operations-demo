@@ -13,6 +13,10 @@
 - Live Chrome headless smoke check rendered Harvest theme, selector, active colony metrics and apiary overview without remaining in loading state.
 - The public implementation is separate from the already-used private application. No private beekeeping source code, database connectivity, operational records, credentials or Colorlib template assets were included. `docs/DESIGN.md` records the design/licence separation.
 
+## Licensing transition
+
+The current `main` branch is being changed to All Rights Reserved for original material. The historical v1.0.0 tag remains at its original commit, where the demo was published under MIT. This change does not revoke that earlier grant or rewrite the release source. No v1.0.0 tag movement or release deletion is authorised.
+
 ## Outstanding acceptance and operational limits
 
 - Independent browser walkthrough of create/edit inspection, follow-up completion, colony moves and chronology, localStorage reload/reset, Studio switching, mobile breakpoints and keyboard accessibility.
