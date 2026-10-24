@@ -1,0 +1,19 @@
+/* Locked navigation uses the same layout as the working views. No premium routes or API. */
+.sidebar{gap:17px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#63816b transparent}
+.navigation .nav-locked{position:relative;display:flex;align-items:center;gap:13px;padding:12px 14px;min-height:45px;border-radius:10px;color:#adc5b8;text-align:left;font-size:14px;font-weight:600;line-height:1.35;cursor:help;user-select:none}
+.navigation .nav-locked:hover,.navigation .nav-locked:focus-visible{background:#285447;color:#e9eee9}
+.navigation .nav-locked:focus-visible{outline:2px solid #edd09a;outline-offset:-2px}
+.premium-label{min-width:0;overflow:hidden;text-overflow:ellipsis}
+.premium-lock{position:relative;display:inline-block;box-sizing:border-box;flex:0 0 14px;width:14px;height:12px;margin:4px 5px 0;border:1.6px solid #d9bc83;border-radius:3px}
+.premium-lock:before{content:'';position:absolute;box-sizing:border-box;width:10px;height:9px;border:1.6px solid #d9bc83;border-bottom:0;border-radius:6px 6px 0 0;top:-9px;left:1px}
+.navigation .nav-locked:after{content:attr(data-tooltip);position:absolute;z-index:12;top:calc(100% + 3px);left:11px;max-width:220px;width:max-content;padding:9px 11px;background:#fff7e6;border:1px solid #e5d5ad;border-radius:8px;box-shadow:0 8px 20px #081d1470;color:#304e3c;font-size:11px;font-weight:650;line-height:1.35;white-space:normal;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .12s}
+.navigation .nav-locked:hover:after,.navigation .nav-locked:focus:after,.navigation .nav-locked:focus-visible:after{opacity:1;visibility:visible}
+html[data-theme="studio"] .navigation .nav-locked{color:#b4c8d2}
+html[data-theme="studio"] .navigation .nav-locked:hover,html[data-theme="studio"] .navigation .nav-locked:focus-visible{background:#3c5868;color:#f5f7f8}
+html[data-theme="studio"] .premium-lock,html[data-theme="studio"] .premium-lock:before{border-color:#bbcfda}
+@media(max-width:850px){
+.sidebar{overflow:visible;overscroll-behavior:auto}
+.navigation .nav-locked{flex:0 0 auto;min-height:36px;padding:9px;gap:7px;font-size:12px;white-space:nowrap}
+.navigation .nav-locked:after{max-width:190px;white-space:normal}
+}
+@media(prefers-reduced-motion:reduce){.navigation .nav-locked:after{transition:none}}
