@@ -4,6 +4,8 @@
 
 **[Live interactive demo](https://pfirsowicz.github.io/beekeeping-operations-demo/)** · **[Latest release: v1.0.0](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.0.0)** · **[CI](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/workflows/ci.yml)**
 
+![HiveLedger simplified public demo — Harvest dashboard with apiary overview, colony metrics and follow-ups](docs/screenshots/hiveledger-dashboard.png)
+
 **Release status (24 October 2026):** GitHub Pages deployed and checked in a live Chromium browser; PR and post-merge Node 22/24 CI passed. End-to-end cross-browser testing remains future work.
 
 HiveLedger presents a simplified set of workflows from an existing beekeeping application that I actively use for my own operations. This public version is implemented separately from the private system and does not connect to it. **The apiaries, colonies, observations and event history supplied with this demo are synthetic sample data.** No private records, credentials, operational database or production infrastructure are included.
