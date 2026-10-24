@@ -90,7 +90,7 @@ To check the browser-only deployment path locally, open **http://127.0.0.1:3000/
 
 **[Open HiveLedger](https://pfirsowicz.github.io/beekeeping-operations-demo/)** — a free, browser-based synthetic-data demo. Choose **Harvest** or **Studio** from the Appearance selector. Inspection, follow-up and colony-move actions in the hosted experience affect only your own browser's local demo storage.
 
-**[Version v1.0.1](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.0.1)** — the current All Rights Reserved simplified public demo release. The original MIT-licensed `v1.0.0` GitHub Release and tag were retired on 24 October 2026; the original source commit is still present in Git history. Removal does not revoke MIT permissions granted to earlier recipients. GitHub provides source archives automatically.
+**[Version v1.0.1](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.0.1)** — the current All Rights Reserved simplified public demo release. GitHub provides source archives automatically.
 
 **Deployment evidence (24 October 2026):** public GitHub Pages returned HTTP 200 for its index and theme/application assets, and a headless Chrome smoke check rendered the Harvest dashboard, metrics, apiary overview and theme selector. The [post-merge CI run](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/runs/40020136403) passed on Node 22 and 24. These are not a substitute for complete manual desktop/mobile interaction testing.
 
@@ -109,7 +109,7 @@ Run `npm test` to exercise:
 
 `npm run audit:public` scans authored implementation and workflow sources for recognised credential patterns and production references, and rejects common accidentally included secret files. This is **not** a complete secret-scanning certification. Also review commit history, GitHub secret-scanning alerts and any added images/dependencies before making the repository public.
 
-GitHub Actions CI runs syntax checks, all Node tests and publication checks on pushes and pull requests. Both PR and post-merge checks for v1.0.0 passed on Node 22 and 24. Browser-level regression testing remains a distinct acceptance activity.
+GitHub Actions CI runs syntax checks, all Node tests and publication checks on pushes and pull requests. PR and post-merge checks passed on Node 22 and 24. Browser-level regression testing remains a distinct acceptance activity.
 
 ## Repository structure
 
@@ -142,4 +142,4 @@ Browser end-to-end tests (Playwright), an accessible keyboard/form review, prope
 
 ## Copyright and separation
 
-**Copyright © 2026 Pawel Firsowicz. All rights reserved.** The current original demo code is publicly viewable for portfolio evaluation; it is not licensed for copying, redistribution, commercial deployment or modification without written permission. Previously MIT-licensed versions retain the rights granted under their original licence.  The underlying private beekeeping application and its implementation, schemas, data, domain operations, assets and business features are **not** licensed or included here. This public subset was implemented independently and contains synthetic records; it does not publish the private system's source code, schema, infrastructure or data.
+**Copyright © 2026 Pawel Firsowicz. All rights reserved.** The current original demo code is publicly viewable for portfolio evaluation; it is not licensed for copying, redistribution, commercial deployment or modification without written permission. The underlying private beekeeping application and its implementation, schemas, data, domain operations, assets and business features are **not** licensed or included here. This public subset was implemented independently and contains synthetic records; it does not publish the private system's source code, schema, infrastructure or data.
