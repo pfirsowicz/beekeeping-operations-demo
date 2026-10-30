@@ -1,18 +1,29 @@
 # HiveLedger — Beekeeping Operations Demo
 
-**A simplified public demo of the beekeeping operations application I use to manage my own apiaries — featuring inspections, follow-ups, colony history and transactional consistency.**
+**Engineering case study:** Domain rules, transactional persistence and traceable history for a small beekeeping operations system. This is a simplified public implementation, not the private application.
 
 **[Live interactive demo](https://pfirsowicz.github.io/beekeeping-operations-demo/)** · **[Latest release: v1.1.0](https://github.com/pfirsowicz/beekeeping-operations-demo/releases/tag/v1.1.0)** · **[CI](https://github.com/pfirsowicz/beekeeping-operations-demo/actions/workflows/ci.yml)**
 
 ![HiveLedger simplified public demo — Harvest dashboard with apiary overview, colony metrics and follow-ups](docs/screenshots/hiveledger-dashboard.png)
 
-HiveLedger presents a simplified set of workflows from an existing beekeeping application that I actively use for my own operations. This public version is implemented separately from the private system and does not connect to it. **The apiaries, colonies, observations and event history supplied with this demo are synthetic sample data.** No private records, credentials, operational database or production infrastructure are included.
+## Engineering decisions and evidence
 
-## Why this project
+- **Stable identity and chronology:** A colony retains its ID when moved; later activity cannot be silently invalidated by backdated operations. [Domain rules](docs/domain.js) · [Domain tests](test/domain.test.js).
+- **Transactional, repeat-safe writes:** Local SQLite commands use foreign keys, a transaction, an operation ID for idempotent retry and an expected revision to reject conflicting edits. [Persistence implementation](src/sqlite-store.js) · [Database tests](test/sqlite.test.js).
+- **Explainable history:** Inspection edits record before/after values, and relocation events preserve source and destination. Unknown observations remain distinct from a measured zero. [Domain rules](docs/domain.js) · [API tests](test/api.test.js).
 
-A beekeeping operation involves more than CRUD: colony identity must survive a move, inspection observations must distinguish *unknown* from *zero*, follow-up tasks need lifecycle state, and a backdated operation must not silently falsify the location history.
+## Operational context and public scope
 
-This public version showcases those established operational workflows in a smaller, inspectable codebase.
+I use a **separate, private beekeeping application** to manage my own apiaries. The requirements illustrated here come from operational problems I encounter: recording inspections, scheduling follow-ups, relocating colonies without losing history and correcting observations without rewriting earlier events. This repository represents selected workflows in a smaller public codebase; it is **not** the private source code or a copy of the production system.
+
+The public app is intentionally bounded. All locations, colonies and observations are **synthetic**. There are no private records, credentials or production connections. The repository and its tests show what the public version implements; they do not establish the security or completeness of the private application.
+
+## Two distinct runtime modes
+
+- **Hosted GitHub Pages demo:** Static HTML/JavaScript with isolated, per-visitor browser `localStorage`. It has **no hosted Node/SQLite backend**, shared accounts or connection to production. Use the live demo to explore the workflows.
+- **Locally runnable Node/SQLite API:** A separate loopback-only server and relational persistence adapter, exercised by the automated tests. It is **not deployed on GitHub Pages**. See [server](src/server.js), [SQLite store](src/sqlite-store.js) and [local setup](#run-locally).
+
+This separation is deliberate: the interactive hosted frontend demonstrates the workflow, while the local implementation makes persistence and concurrency rules inspectable.
 
 ## Features
 
@@ -26,10 +37,6 @@ This public version showcases those established operational workflows in a small
 | History | Combined colony timeline, location moves and append-only audit events with edited-value deltas |
 | Safety | Domain validation, relational constraints, transactional writes, idempotency, revision conflicts |
 | Appearance | Harvest (green and honey) or Studio (neutral CRM) theme; visitor-local preference |
-
-### Advanced modules shown as premium previews
-
-The main navigation includes **Treatments, Sales & Purchases, Weather, Analytics, Queens, Mating, Grafting and Graft Lines**, directly below Follow-ups, using lock icons rather than the ordinary navigation icons. Hovering or keyboard-focusing these items shows **“Available in the full application (premium)”**. They illustrate the broader product capabilities but are **not implemented or accessible in this public demo**. They expose no route, API, login, checkout or premium subscription. This is not a currently purchasable upgrade.
 
 ### The distinctive workflow: move a colony
 
