@@ -11,7 +11,8 @@ try{for(const width of [1440,768,390,320]){
  p.on('pageerror',e=>errors.push(e.message));
  await p.goto(url,{waitUntil:'networkidle'});
  await p.locator('#mode-label').waitFor();
- assert.equal(await p.locator('.nav-locked').count(),8);
+ assert.deepEqual(await p.locator('#navigation button[data-view]').evaluateAll(nodes=>nodes.map(n=>n.dataset.view)),['overview','apiaries','colonies','activity','followups']);
+ assert.equal(await p.locator('.nav-locked').count(),0);
  assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'overflow '+width);
  await p.locator('#theme-select').selectOption('studio');await p.reload({waitUntil:'networkidle'});
  assert.equal(await p.locator('#theme-select').inputValue(),'studio');
@@ -45,7 +46,8 @@ try{for(const width of [1440,768,390,320]){
   await p.locator('button[data-action="colony"][data-id="col_101"]').click();
   assert.match(await p.locator('.detail-facts').textContent(),/Fern Ridge/);
  }
- await p.locator('.nav-locked').first().focus();await p.keyboard.press('Enter');
+ await p.locator('#navigation button[data-view="overview"]').focus();await p.keyboard.press('Enter');
+ assert.equal(await p.locator('#page-title').textContent(),'Overview');
  assert.equal(await p.locator('#editor').evaluate(e=>e.open),false);
  assert.deepEqual(errors,[]);
  console.log('PASS '+width+'px '+(live?'hosted':'local'));
