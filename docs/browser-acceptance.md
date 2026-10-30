@@ -1,5 +1,7 @@
 # Browser acceptance — 24 October 2026
 
+> Historical acceptance record for the version published on 24 October 2026. That release included disabled premium navigation items, so the checks recorded below were appropriate to that historical version. The proposed 30 October portfolio-refinement branch removes those items; its browser script instead checks only implemented navigation and keyboard activation. A new branch CI run and any post-merge live acceptance must be recorded separately. This change does not retroactively alter the 24 October results.
+
 ## Scope and environment
 
 Synthetic public HiveLedger demo only. No private beekeeping services, production databases, user records or paid services were accessed or changed.
